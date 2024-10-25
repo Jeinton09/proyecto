@@ -18,7 +18,7 @@
             android:id="@+id/menu"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@color/register"
+            android:background="@color/menu"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
@@ -28,7 +28,7 @@
                 android:id="@+id/usermenu"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/usern1"
+                android:src="@drawable/user"
                 android:layout_marginStart="9dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

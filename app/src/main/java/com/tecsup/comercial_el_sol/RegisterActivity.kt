@@ -21,10 +21,9 @@ class RegisterActivity: AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
 
-        edtUsername = findViewById(R.id.edtusername)
+        edtUsername = findViewById(R.id.edtuser)
         edtEmail = findViewById(R.id.edtemail)
         edtPassword = findViewById(R.id.edtpassword)
-        btnRegister = findViewById(R.id.btnregister)
 
         btnRegister.setOnClickListener {
             val username = edtUsername.text.toString()

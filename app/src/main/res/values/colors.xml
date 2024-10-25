@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="sesion">#c501e2</color>
-    <color name="register">#9a27f7</color>
-    <color name="menu">#ffa300</color>
+    <color name="white">#D9FFFFFF</color>
+    <color name="sesion">#99610f</color>
+    <color name="register">#8099610F</color>
+    <color name="menu">#D93F2009</color>
+    <color name="grey">#595959</color>
+    <color name="one">#1AFFFFFF</color>
 
 </resources>

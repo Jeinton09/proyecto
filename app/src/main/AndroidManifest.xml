@@ -27,6 +27,9 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".AddProductActivity"/>
         <activity android:name=".PrincipalActivity"/>
+        <activity android:name=".PerfilUsuarioActivity"/>
+        <activity android:name=".Menu_HeaderActivity"/>
+
 
     </application>
 

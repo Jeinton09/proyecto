@@ -1,97 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="30dp"
-    android:orientation="vertical"
     android:gravity="center">
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/user"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DATOS PERSONALES"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"/>
-    <LinearLayout
+    <!-- Menú Superior -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="start"
-        android:layout_marginTop="10dp">
+        android:layout_height="70dp"
+        android:background="@color/menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imgfondo">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtmenu"
+            android:layout_margin="12dp"/>
 
         <TextView
+            android:id="@+id/txtmenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre:"
-            android:textSize="24sp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Charly"
-            android:textSize="24sp"
-            android:layout_marginStart="10dp"
+            android:text="PERFIL"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Fondo de Pantalla -->
     <LinearLayout
+        android:id="@+id/imgfondo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="start">
+        android:background="@drawable/fondo"
+        app:layout_constraintTop_toBottomOf="@id/menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <!-- Imagen de Usuario -->
+    <ImageView
+        android:id="@+id/imguser"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/user"
+        app:layout_constraintTop_toBottomOf="@+id/menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <!-- Layout de Datos de Usuario -->
+    <LinearLayout
+        android:id="@+id/layoutsesion"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintTop_toBottomOf="@+id/imguser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp">
+
+        <!-- Información de Usuario -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USERNAME:"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Charly Hilasaca"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Correo:"
-            android:textSize="24sp"/>
-
+            android:text="EMAIL:"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9sp"
             android:text="charly.hilasaca@tecsup.edu.pe"
-            android:textSize="19sp" />
+            android:layout_marginBottom="10dp"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="start">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password:"
-            android:textSize="24sp"/>
+            android:text="TELÉFONO:"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10sp"
-            android:text="**********"
-            android:textSize="25sp"/>
+            android:layout_height="wrap_content"
+            android:text="943574633"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Redes Sociales -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REDES SOCIALES:"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- WhatsApp -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/social"
+                android:layout_marginEnd="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WhatsApp"
+                android:textStyle="italic"/>
+        </LinearLayout>
+
+        <!-- Facebook -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/facebook"
+                android:layout_marginEnd="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facebook"
+                android:textStyle="italic"/>
+        </LinearLayout>
+
     </LinearLayout>
 
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        android:text="EDITAR"
-        android:backgroundTint="@color/register"/>
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:text="VOLVER"
-        android:backgroundTint="@color/sesion"/>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
