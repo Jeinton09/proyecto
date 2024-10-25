@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_calculator"
+            android:icon="@drawable/fav"
+            android:title="@string/ajustes"/>
+        <item
+            android:id="@+id/method_payment"
+            android:icon="@drawable/pago"
+            android:title="@string/pago"/>
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/history"
+            android:title="@string/contactanos"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/contact"
+            android:title="@string/support"/>
+        <item
+            android:id="@+id/exit"
+            android:icon="@drawable/exit"
+            android:title="@string/exit"/>
+    </group>
+</menu>

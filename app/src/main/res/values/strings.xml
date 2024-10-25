@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Comercial_El_Sol</string>
+    <string name="ajustes">Favoritos</string>
+    <string name="support">Soporte</string>
+    <string name="contactanos">Historial</string>
+    <string name="pago">Metodo de Pago</string>
+    <string name="exit">Cerrar Sesion</string>
+</resources>
