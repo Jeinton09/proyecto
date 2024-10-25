@@ -16,6 +16,10 @@
             android:icon="@drawable/history"
             android:title="@string/contactanos"/>
         <item
+            android:id="@+id/nav_ubi"
+            android:icon="@drawable/ubi"
+            android:title="Ubicacion"/>
+        <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/contact"
             android:title="@string/support"/>
